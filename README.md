@@ -24,7 +24,7 @@ Parallel selection scans (percentile FST via vcftools + PCA-based outlier detect
 **[Protein_Structure_Classification](https://github.com/ReitheHeroine/Protein_Structure_Classification_Final_Project)** — Multi-label classification of protein functional categories from PDB biophysical features.
 A custom keyword-matching engine parses free-text PDB classification strings (handling binding disambiguation and DNA/RNA priority logic) into a 23-class binary target matrix. Three classifiers compared: Random Forest, Decision Tree (scikit-learn), and Neural Network (TensorFlow/Keras).
 
-I also make things for fun! <img src="assets/glim_icon.png" alt="Glim" width="28" style="vertical-align: middle;"/> **[Glim](https://github.com/ReitheHeroine/Glim)** — A browser-based wellness companion PWA with an interactive creature, habit tracking, and cross-device sync. A pet project (literally) for learning frontend development.
+I also make things for fun! **[Glim](https://github.com/ReitheHeroine/Glim)**  <img src="assets/glim_icon.png" alt="Glim" width="28" style="vertical-align: middle;"/> — A browser-based wellness companion PWA with an interactive creature, habit tracking, and cross-device sync. A pet project (literally) for learning frontend development.
 
 ---
 
