@@ -1,15 +1,15 @@
-<svg width="100%" viewBox="0 0 820 960" xmlns="http://www.w3.org/2000/svg">
+<svg width="100%" viewBox="0 0 820 968" xmlns="http://www.w3.org/2000/svg">
 <style>
   text { font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
-  .title { font-size: 18px; font-weight: 600; fill: #2D2D2D; letter-spacing: 0.5px; }
-  .subtitle { font-size: 11px; font-weight: 400; fill: #8A8A8A; letter-spacing: 1.5px; text-transform: uppercase; }
+  .title { font-size: 18px; font-weight: 600; fill: #D0D0D0; letter-spacing: 0.5px; stroke: #000000; stroke-width: 3px; paint-order: stroke; stroke-linejoin: round; }
+  .subtitle { font-size: 11px; font-weight: 400; fill: #B0B0B0; letter-spacing: 1.5px; text-transform: uppercase; stroke: #000000; stroke-width: 2.5px; paint-order: stroke; stroke-linejoin: round; }
   .node-title { font-size: 13px; font-weight: 600; }
   .node-sub { font-size: 11px; font-weight: 400; }
   .node-num { font-size: 10px; font-weight: 700; opacity: 0.35; }
   .arr { stroke: #9E9E9E; stroke-width: 1.4; }
   .diag-arrow { stroke: #C4C4C4; stroke-width: 1; stroke-dasharray: 5 3; }
-  .fanout-label { font-size: 10px; fill: #999; letter-spacing: 0.3px; }
-  .legend-text { font-size: 10.5px; fill: #777; }
+  .fanout-label { font-size: 10px; fill: #B0B0B0; letter-spacing: 0.3px; stroke: #000000; stroke-width: 2.5px; paint-order: stroke; stroke-linejoin: round; }
+  .legend-text { font-size: 10.5px; fill: #B0B0B0; stroke: #000000; stroke-width: 2.5px; paint-order: stroke; stroke-linejoin: round; }
 
   .n-teal { fill: #E8F6F0; stroke: #3DAA8A; stroke-width: 1; rx: 10; }
   .n-teal-t { fill: #1B6B52; }
@@ -22,13 +22,12 @@
   .n-warm { fill: #FDF0EB; stroke: #C0724E; stroke-width: 1; rx: 10; }
   .n-warm-t { fill: #7A3D22; }
   .n-warm-s { fill: #C0724E; }
+  .n-coral { fill: #FDF0EB; stroke: #C0724E; stroke-width: 1; rx: 10; }
+  .n-coral-t { fill: #7A3D22; }
+  .n-coral-s { fill: #C0724E; }
 
   .n-neutral { fill: #F4F3F0; stroke: #AAAAAA; stroke-width: 1; rx: 10; }
   .n-neutral-t { fill: #555; }
-
-  .n-future { fill: none; stroke: #BBBBBB; stroke-width: 1; stroke-dasharray: 5 3; rx: 10; }
-  .n-future-t { fill: #999; }
-  .n-future-s { fill: #AAAAAA; }
 </style>
 
 <defs>
@@ -49,7 +48,7 @@
 <!-- =============== TITLE =============== -->
 <text class="subtitle" x="410" y="28" text-anchor="middle">PROSIFT</text>
 <text class="title" x="410" y="50" text-anchor="middle">Pipeline Architecture</text>
-<line x1="330" y1="58" x2="490" y2="58" stroke="#E0E0E0" stroke-width="1"/>
+<line x1="330" y1="58" x2="490" y2="58" stroke="#888888" stroke-width="1"/>
 
 <!-- =============== ROW 0: Input =============== -->
 <rect x="318" y="78" width="184" height="42" class="n-neutral" filter="url(#shadow-sm)"/>
@@ -148,18 +147,18 @@
 <text class="node-num n-neutral-t" x="332" y="809" dominant-baseline="central">OUT</text>
 <text class="node-title n-neutral-t" x="410" y="809" text-anchor="middle" dominant-baseline="central">Results directory</text>
 
-<!-- Dashed: Results -> Frontend -->
-<line x1="410" y1="826" x2="410" y2="858" class="diag-arrow" marker-end="url(#arr-diag)"/>
+<!-- Arrow: Results -> Frontend -->
+<line x1="410" y1="826" x2="410" y2="858" class="arr" marker-end="url(#arr-end)"/>
 
-<!-- =============== ROW 8: Future frontend =============== -->
-<rect x="318" y="862" width="184" height="50" class="n-future"/>
-<text class="node-num n-future-s" x="332" y="880" dominant-baseline="central">09</text>
-<text class="node-title n-future-t" x="410" y="880" text-anchor="middle" dominant-baseline="central">Interactive Frontend</text>
-<text class="node-sub n-future-s" x="410" y="898" text-anchor="middle" dominant-baseline="central">planned</text>
+<!-- =============== ROW 8: Interactive Frontend =============== -->
+<rect x="318" y="862" width="184" height="54" class="n-coral" filter="url(#shadow)"/>
+<text class="node-num n-coral-s" x="332" y="882" dominant-baseline="central">09</text>
+<text class="node-title n-coral-t" x="410" y="882" text-anchor="middle" dominant-baseline="central">Interactive Frontend</text>
+<text class="node-sub n-coral-s" x="410" y="900" text-anchor="middle" dominant-baseline="central">exploration + query interface</text>
 
 <!-- =============== LEGEND =============== -->
 <g transform="translate(560, 78)">
-  <text class="fanout-label" x="0" y="0" font-weight="600" fill="#999">LEGEND</text>
+  <text class="fanout-label" x="0" y="0" font-weight="600">LEGEND</text>
   <rect x="0" y="10" width="14" height="14" rx="3" class="n-teal"/>
   <text class="legend-text" x="22" y="22">Analytical step</text>
   <rect x="0" y="32" width="14" height="14" rx="3" class="n-indigo"/>
